@@ -132,4 +132,21 @@
 
 	});
 
+    $("nav").find("a").click(function(e) {
+    e.preventDefault();
+    var section = $(this).attr("href");
+    $("html, body").animate({
+        scrollTop: $(section).offset().top
+    });
+
+    // $("nav").find("a").click(function(){
+    // 	e.preventDefault();
+    // var section = $(this).attr("href");
+    //     $("a").fadeToggle();
+    //     $("a").fadeToggle("slow");
+    //     $("a").fadeToggle(3000);
+    // });
+
+});
+
 })(jQuery);
